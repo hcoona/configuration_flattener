@@ -1,9 +1,8 @@
-#load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl",
-#    "maven_jar", "maven_dependency_plugin")
+load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl",
+    "maven_jar", "maven_dependency_plugin")
 
 maven_server(
-    name = "default",
-    url = "http://maven.aliyun.com/nexus/content/groups/public/"
+    name = "default"
 )
 
 maven_jar(

@@ -18,11 +18,18 @@ public abstract class AbstractProcessor implements IFileProcessor {
   protected final FileSystem fileSystem;
   protected final Charset charset;
 
-  public AbstractProcessor(
-      MessageDigest messageDigest,
-      FileSystem fileSystem,
-      Charset charset) {
-    // TODO: preconditions
+  public AbstractProcessor(MessageDigest messageDigest,
+      FileSystem fileSystem, Charset charset) {
+    if (messageDigest == null) {
+      throw new IllegalArgumentException("messageDigest cannot be null");
+    }
+    if (fileSystem == null) {
+      throw new IllegalArgumentException("fileSystem cannot be null");
+    }
+    if (charset == null) {
+      throw new IllegalArgumentException("charset cannot be null");
+    }
+
     this.digestUtils = new DigestUtils(messageDigest);
     digestAlgorithm = messageDigest.getAlgorithm();
     this.fileSystem = fileSystem;

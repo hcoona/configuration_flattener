@@ -1,9 +1,12 @@
-load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl",
-    "maven_jar", "maven_dependency_plugin")
+load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar", "maven_dependency_plugin")
+load(":junit5.bzl", "junit_jupiter_java_repositories", "junit_platform_java_repositories")
 
 maven_server(
     name = "default"
 )
+
+junit_jupiter_java_repositories()
+junit_platform_java_repositories()
 
 maven_jar(
     name = "org_apache_commons_commons_lang3",
@@ -36,11 +39,6 @@ maven_jar(
 )
 
 maven_jar(
-    name = "junit_junit",
-    artifact = "junit:junit:4.12"
-)
-
-maven_jar(
     name = "com_google_jimfs_jimfs",
     artifact = "com.google.jimfs:jimfs:1.1"
 )
@@ -48,9 +46,4 @@ maven_jar(
 maven_jar(
     name = "com_google_guava_guava",
     artifact = "com.google.guava:guava:25.1-jre"
-)
-
-maven_jar(
-    name = "org_junit_jupiter_junit_jupiter_api",
-    artifact = "org.junit.jupiter:junit-jupiter-api:5.2.0"
 )

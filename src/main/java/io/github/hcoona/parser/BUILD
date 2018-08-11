@@ -5,6 +5,6 @@ package(
 java_library(
     name = "ini_parser",
     srcs = [
-        "IniParser.java",
+        "ini/IniParser.java",
     ],
 )

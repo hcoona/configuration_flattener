@@ -2,7 +2,7 @@ load("@bazel_tools//tools/build_defs/repo:maven_rules.bzl", "maven_jar", "maven_
 load(":junit5.bzl", "junit_jupiter_java_repositories", "junit_platform_java_repositories")
 
 maven_server(
-    name = "default"
+    name = "default",
 )
 
 junit_jupiter_java_repositories()

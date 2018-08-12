@@ -1,4 +1,4 @@
-package io.github.hcoona.parser.ini;
+package io.github.hcoona.ini;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
 
-import io.github.hcoona.parser.ini.IniParser.Event;
+import io.github.hcoona.ini.IniParser.Event;
 
 public class IniParserTest {
   private static final ClassLoader CLASS_LOADER =

@@ -1,7 +1,6 @@
-package io.github.hcoona.parser.ini;
+package io.github.hcoona.ini;
 
 import java.io.Closeable;
-import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Iterator;
 import java.util.Queue;

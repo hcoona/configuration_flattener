@@ -2,6 +2,8 @@
 
 This project help to flatten INI file according to several dimensions.
 
+**Moved to https://github.com/hcoona/one/tree/master/configuration_flattener**
+
 ## Getting Started ##
 
 ### How to build ###
